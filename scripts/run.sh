@@ -3,7 +3,7 @@
 set -e
 
 # Find a Wireguard interface
-interfaces=`find /etc/wireguard -type f`
+interfaces=`find /etc/wireguard -type f -name "*.conf"`
 if [[ -z $interfaces ]]; then
     echo "$(date): Interface not found in /etc/wireguard" >&2
     exit 1
